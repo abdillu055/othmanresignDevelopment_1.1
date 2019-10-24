@@ -67,6 +67,10 @@ security cms -D -i $tempextracted"/Payload/$APPLICATION/embedded.mobileprovision
 #rm $tempextracted"/Payload/$APPLICATION/embedded.mobileprovision"
 ############################## // ِ############################## //
 
+######################## هذا المسار لحذف ملف الاجهزة UISupportedDevices من ملف الانفو بلست ِ################## //
+/usr/libexec/PlistBuddy -c "delete :UISupportedDevices" $tempextracted"/Payload/$APPLICATION/Info.plist" 2>/dev/null
+
+
 while IFS='' read -r line || [[ -n "$line" ]]; do
 
 /usr/bin/codesign --continue -f -s "$DEVID" --entitlements "/tmp/N_entitlements"$filename".plist"  "$line" >/dev/null 2>&1
