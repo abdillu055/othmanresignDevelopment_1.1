@@ -60,7 +60,7 @@ security cms -D -i $tempextracted"/Payload/$APPLICATION/embedded.mobileprovision
 /usr/libexec/PlistBuddy -x -c 'Print:Entitlements' /tmp/N_entitlements_full"$filename".plist >> /tmp/N_entitlements"$filename".plist
 
 ############################## هذا المسار لحل مشكلة الايقونات في الاكس ار ِ############################## //
-/usr/libexec/PlistBuddy -c "delete :CFBundleIcons:CFBundlePrimaryIcon:CFBundleIconName" $tempextracted"/Payload/$APPLICATION/Info.plist"
+/usr/libexec/PlistBuddy -c "delete :CFBundleIcons:CFBundlePrimaryIcon:CFBundleIconName" $tempextracted"/Payload/$APPLICATION/Info.plist" 2>/dev/null
 ############################## // ِ############################## //
 
 ############################## // هذا المسار لحذف الشهاده بعد دمجها ##############################
