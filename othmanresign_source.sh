@@ -71,6 +71,13 @@ security cms -D -i $tempextracted"/Payload/$APPLICATION/embedded.mobileprovision
 ######################## هذا المسار لحذف ملف الاجهزة UISupportedDevices من ملف الانفو بلست ِ################## //
 /usr/libexec/PlistBuddy -c "delete :UISupportedDevices" $tempextracted"/Payload/$APPLICATION/Info.plist" 2>/dev/null
 
+#################################################
+#siri kit لابد ان تفعل اختيار
+#identifier من حساب ابل المطورين من
+
+# هذا الامر لتفعيل الاشعارات في الواتساب
+/usr/libexec/PlistBuddy -c "delete :BGTaskSchedulerPermittedIdentifiers" $tempextracted"/Payload/$APPLICATION/Info.plist" 2>/dev/null
+############################## // ِ############################## //
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
 
