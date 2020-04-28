@@ -8,7 +8,7 @@ MOBILEPROV="$BASEDIR"'/embedded.mobileprovision'
 
 DEVID="$1"
 
-echo "This program made by Othman Almutairi @othman_tech"
+echo "This program made by abdillu055/x3bod.github.io @othman_tech"
 
 echo "The purpose of this program is to resign ipa files with a specific Entitlements"
 echo "without changing the original Bundle Identifier to allow Push Notification"
@@ -96,7 +96,7 @@ done < /tmp/N_files.txt
 
 rm /tmp/N_files.txt
 
-echo "Done .. Thank you for using Resign from Othman Almutairi @othman_tech"
+echo "Done .. Thank you for using Resign from abdillu055/x3bod.github.io"
 
 
 
